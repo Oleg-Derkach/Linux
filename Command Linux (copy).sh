@@ -2,20 +2,7 @@ Command for Linux system
 
 ./file.sh  - file execution
 
-ls - 		list of dirrectory
-head [-5] [name of file]- read 5 strings of file from head
-	head -5 posit.sh
-tail [5] [name of file] - read 5 strings of file from down
-	tail -5 posit.sh
-tail -f posit.sh - allow user to read file in online mode	
-grep ['fragment'][filename] - serch occurrences of fragment inside the file
-	grep 'echo' posit.sh
-	grep aditional keys -c - quantity of occurrences
-	grep		        -n - full string of occurrences
-history  - shows the commands inserted into the bash
-	history | grep head  - returns the history inputs for bash with command head
-	For Example we need to find command which we insert into he bash, but the 
-	time life of the terminal is too long and we need to spend a lot of time
+
 	to find the command we need. In this case we use conveyor with command grep
 	How it works - command history return string type information with data,
 	then we follow this information to grep and as result command return for us
