@@ -1,14 +1,18 @@
 Command for Linux system
 
 ./file.sh  - file execution
+nano - simple additor of text file
+	nano [filename.txt] if file does not exist, nano create new file
 
+mv [file_in] [file_out] rename the file
 ls - 		list of dirrectory
+
 head [-5] [name of file]- read 5 strings of file from head
 	head -5 posit.sh
 tail [5] [name of file] - read 5 strings of file from down
 	tail -5 posit.sh
 tail -f posit.sh - allow user to read file in online mode	
-grep ['fragment'][filename] - serch occurrences of fragment inside the file
+grep ['slug'][filename] - serch occurrences of slug inside the file
 	grep 'echo' posit.sh
 	grep aditional keys -c - quantity of occurrences
 	grep		        -n - full string of occurrences
@@ -20,13 +24,31 @@ history  - shows the commands inserted into the bash
 	How it works - command history return string type information with data,
 	then we follow this information to grep and as result command return for us
 	lines with occurrences 'head' in history   
+==============
+Konnectors
+&&  First command executed always, second command executed only if First
+	command completes successfully
+||  First command executed always, second command executed only if First
+	command does not completes
+;   Commands always executed 
+	Example
+					$ true && echo Hello
+				  		Hello
+					$ false || echo Hello
+						Hello
+					$ echo Hello ; ls
+						Hello
+  						test.txt file1.txt file2.txt 
+===================
 
 ===================
-conveyor (|)
+Conveyor or Pipes
+(|) allow us to connect output from first comand to input second command
+Example
+ls -l | head -15    [show the list of first 15 files(dirrectories)]
 history | grep ls -n
 history | grep 'ls' -n    - it is possible to use '' for atributes 
-'|' this symbol means that output result from 'history' follow to input to 
-command 'grep'
+
 ==============	
 
 cal - 		calendar with current date

@@ -1,0 +1,94 @@
+
+
+First installations---------------------------
+git config --global user.name "My Name"
+git config --global user.email google@gmail.com
+git config --global core.editor nano
+git config --list     [shows all global configurations variables]
+	git config user.name
+
+Creating new Repo ---------------------------
+git init     [add all necessary git files into dirrectory]
+git add .    [stage all files inside working folder] 
+	git add [filename] "stage current file"          
+
+
+Clone Repository --------------------------
+git clone https://github.com/libgit2/libgit2 [clone repo vs direct url]
+
+git fetch [takes all changes after clone the repo]
+
+git merge [merge the remote branch and your current working branch]
+	if after cloning, you made some changes in repo, you see the massage
+	that is not possible to make marge, because you changes will be deleted
+	In that case you need to 'STASH [Приберечь]' you changes in temporary 
+	place. 
+git marge [	Then you can to marge the branch ]
+
+git stash [stash you changes]
+	After this command you see that you changes stashed
+	Saved working directory and index state WIP on master: 34d40ff newafasf
+
+git stash list [shows all stash] 
+
+
+git status [show changes in repo folder]
+git status -s [show cahnges shortly]
+
+
+git diff [после того как выполнилась команда 'git add' файлы были проиндексированы
+	но еще не закомчены, затем мы внесли изменения в репозитории, и чтобы 
+	посмотреть эти изменения нужно набрать команду git diff]
+
+git commit [proceed to commit the changes, then open text editor and show all changes
+	under comment hash '#' ,then add comment and save. lines with '#' will be ignored]
+	git commit -m 'Commit text for information' [2-nd way to commit changes is to 
+		use -m 'commit text' to make notes for commit without the text editor] 
+	git commit -a [дополнительный ключ -а позволяет автоматически индексировать все 
+		изменения которые были сделаны, вместо  git addgit add]
+! if we need to add some file to our commit, we can use 
+!	git add [forgoten file] 
+!	git commit --amend
+===============================
+Example Commit  
+git commit -a -m 'First Commit'
+
+git log [show all commits]
+	git log -p [show difference in commits]
+	git log --stat [show short information in commit changes]
+	git log --graph [show graph of commit]
+	git log --pretty=format:"%h %s" --graph [show graph in pretty format]
+
+git remote [show all remote repositories]
+	git remote -v [show address of all remote repositories]
+	
+git push origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
