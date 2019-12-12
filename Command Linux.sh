@@ -5,7 +5,11 @@ nano - simple additor of text file
 	nano [filename.txt] if file does not exist, nano create new file
 
 mv [file_in] [file_out] rename the file
+ln -s [target] [shortcut_file]  - create the shortcut
+	ln -s /home/django/kofee.ini /etc/uwsgi/vassals/
 ls - 		list of dirrectory
+
+htop [system and resource information]
 
 head [-5] [name of file]- read 5 strings of file from head
 	head -5 posit.sh
@@ -24,6 +28,10 @@ history  - shows the commands inserted into the bash
 	How it works - command history return string type information with data,
 	then we follow this information to grep and as result command return for us
 	lines with occurrences 'head' in history   
+
+read -p [same as input in python]
+	read -sp [for password purposes hide input]
+	
 ==============
 Konnectors
 &&  First command executed always, second command executed only if First
@@ -61,13 +69,16 @@ wget [direct url path to file] downloader for linux. Allow user to download file
 
 man [function] - manual(instraction) for function
 pwd      - my current location
+which python - commant to show location of programm
 chmod +x(executable file)   change attribute for file
-	chmod +x hello-world.sh
+	chmod +x hello-world.sh  
+	chmod 753  - 7[owner of file] 5[grooup]  3[permission thet they have]
 		#!/bin/bash
 		echo "Hello World"
 	"Hello World"
 	
-rm -r(recursively)   remove file or dirrectory recursively	
+rm   remove file 
+rmdir remove dirrectory	
 
 Compress (not archive) files / folders
 tar -cvf(compress verbose file) [filename(result)] [filename(to comress)]
