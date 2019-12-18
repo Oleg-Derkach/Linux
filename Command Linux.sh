@@ -5,7 +5,7 @@ nano - simple additor of text file
 	nano [filename.txt] if file does not exist, nano create new file
 
 mv [file_in] [file_out] rename the file
-ln -s [target] [shortcut_file]  - create the shortcut
+ln -s [target] [shortcut_file]  - create the shortcutF
 	ln -s /home/django/kofee.ini /etc/uwsgi/vassals/
 ls - 		list of dirrectory
 

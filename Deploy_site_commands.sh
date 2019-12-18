@@ -1,3 +1,6 @@
+Использовать команды pip3  и python3
+
+
 ssh root@121.22.23.152   Connecting to server via SSH Protocol
 apt-get update
 apt-get upgrade   update pocket base
@@ -13,14 +16,19 @@ apt-get install nginx   устанавливаем сервер nginx
 	nginx -s reload  restart configuration
 	nginx -s quit   exit server
 	nginx -s stop  stop servver
-apt-get install python3-dev python3-setuptools install python libs
+apt-get install python3-dev python3-setuptools      install python libs
 or easy_install-3.4 vertualenv    virtual environment instalator
 or apt-get install virtualenv   -  virtual environment instalator
-virtualenv venv  - create virtual environment
 
 adduser django  -  creates new user    django(user)
+user cofe pass 1
 
-user django pass 123
+python3 -m pip install --upgrade pip
+pip3 install vertualenv
+
+
+virtualenv -p [/usr/bin/python3/path to python3!!!] venv[name_virt]   
+	- create virtual environment using python3 with python3 as main interpreter !!!
 
 source ../venv/bin/activate    -  activate the venv
 		source /venv/bin/activate
@@ -35,6 +43,8 @@ sshfs root@185.233.118.225:/ /home/pups/Downloads/RemoteMachine
 	где root@185.233.118.225:/  это адрес нашего сервера
 	/home/pups/Downloads/RemoteMachine - папка связи сервером
 	вводим пароль от сервера
+	umount /home/pups/Downloads/RemoteMachine   
+	unmount remote machine                    размонтировать
 
 находим публичный ключ в папке /root/.ssh/id_rsa.pub
 копируем его содержимое
@@ -81,7 +91,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static", "static_dev"),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
-Для того чтобы привязать nginx к статическим файлам прроекта
+Для того чтобы привязать nginx к статическим файлам проекта
 нужно указать STATIC_ROOT папку в сетингс.пу
 STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_prod")
 
@@ -169,7 +179,8 @@ ln -s /home/django/Kofee_shop/Deployment/Kofee_shop_nginx.conf /etc/nginx/sites-
 
 Помещаем файл с картинкой, например, media.png в папку /home/django/my_site/media.
 
-В браузере переходим по адресу yourserver.com:8000/media/media.png и, если видим наш файл, значит мы все сделали правильно.
+В браузере переходим по адресу yourserver.com:8000/media/media.png и, если видим наш файл, 
+значит мы все сделали правильно.
 
 Пробуем запустить через сокет:
 	 uwsgi --socket uwsgi_nginx.sock --module Kofee_shop.wsgi --chmod-socket=666
